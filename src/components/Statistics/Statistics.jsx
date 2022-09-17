@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import s from './Statistics.module.scss';
 
 const Statistics = props => {
   const { title, stats } = props;
