@@ -1,0 +1,10 @@
+.transaction-history {
+  width: 1000px;
+  background-color: grey;
+}
+.transactionHeader {
+  background-color: blue;
+}
+.transactionColumn:nth-of-type(even) {
+  background-color: #fff;
+}

@@ -1,8 +1,10 @@
 import FriendListItem from 'components/FriendListItem/FriendListItem';
+import PropTypes from 'prop-types';
 import s from './FriendList.module.scss';
 
 const FriendList = props => {
   const { friends } = props;
+  console.log('~ friends', friends);
 
   return (
     <ul className={s['friend-list']}>
@@ -11,6 +13,17 @@ const FriendList = props => {
       ))}
     </ul>
   );
+};
+
+FriendList.propTypes = {
+  friends: PropTypes.arrayOf(
+    PropTypes.shape({
+      avatar: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      isOnline: PropTypes.bool.isRequired,
+      id: PropTypes.number.isRequired,
+    })
+  ),
 };
 
 export default FriendList;

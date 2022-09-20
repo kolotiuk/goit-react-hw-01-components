@@ -6,7 +6,7 @@ const TransactionHistory = props => {
 
   return (
     <table className={s['transaction-history']}>
-      <thead>
+      <thead className={s.transactionHeader}>
         <tr>
           <th>Type</th>
           <th>Amount</th>
@@ -14,9 +14,9 @@ const TransactionHistory = props => {
         </tr>
       </thead>
 
-      <tbody>
+      <tbody className={s.transaction}>
         {items.map(item => (
-          <tr key={item.id}>
+          <tr key={item.id} className={s.transactionColumn}>
             <td>{item.type}</td>
             <td>{item.amount}</td>
             <td>{item.currency}</td>
