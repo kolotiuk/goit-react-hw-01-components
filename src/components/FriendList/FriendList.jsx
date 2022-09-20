@@ -4,7 +4,6 @@ import s from './FriendList.module.scss';
 
 const FriendList = props => {
   const { friends } = props;
-  console.log('~ friends', friends);
 
   return (
     <ul className={s['friend-list']}>
